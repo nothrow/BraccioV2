@@ -14,6 +14,8 @@ setOneRelative	KEYWORD2
 setJointMax	KEYWORD2
 setJointMin	KEYWORD2
 setJointCenter	KEYWORD2
+getCurrentPositions	KEYWORD2
+getTargetPositions	KEYWORD2
 setDelta	KEYWORD2
 setAllNow	KEYWORD2
 update	KEYWORD2

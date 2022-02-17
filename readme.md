@@ -1,5 +1,5 @@
 # BraccioV2: An updated library for the Tinkerkit Braccio arm
-This library provides additional software functionality to the Tinkerkit Braccio arm.
+This library provides additional software functionality to the Tinkerkit Braccio arm. This is fork that allows reading of the values.
 
 # Getting Started
 First, install the library. Download the repository as a zip file and unpack into your ```Arduino/libraries/``` folder.

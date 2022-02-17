@@ -63,6 +63,8 @@ class Braccio {
     void safeDelay(int ms);
     void safeDelay(int ms, int t);
     int getCenter(int joint);
+    void getCurrentPositions(int* b, int* s, int* e, int* w, int* w_r, int* g);
+    void getTargetPositions(int* b, int* s, int* e, int* w, int* w_r, int* g);
   private:
     void _softStart();
     void _softwarePWM(int high, int low);

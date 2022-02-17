@@ -111,6 +111,26 @@ bool Braccio::setAllAbsolute(int b, int s, int e, int w, int w_r, int g) {
   return out;
 }
 
+void Braccio::getCurrentPositions(int* b, int* s, int* e, int* w, int* w_r, int* g)
+{
+  if (b) *b = _currentJointPositions[BASE_ROT];
+  if (s) *s = _currentJointPositions[SHOULDER];
+  if (e) *e = _currentJointPositions[ELBOW];
+  if (w) *w = _currentJointPositions[WRIST];
+  if (w_r) *w_r = _currentJointPositions[WRIST_ROT];
+  if (g) *g = _currentJointPositions[GRIPPER];
+}
+
+void Braccio::getTargetPositions(int* b, int* s, int* e, int* w, int* w_r, int* g)
+{
+  if (b) *b = _targetJointPositions[BASE_ROT];
+  if (s) *s = _targetJointPositions[SHOULDER];
+  if (e) *e = _targetJointPositions[ELBOW];
+  if (w) *w = _targetJointPositions[WRIST];
+  if (w_r) *w_r = _targetJointPositions[WRIST_ROT];
+  if (g) *g = _targetJointPositions[GRIPPER];
+}
+
 /*
    Sets all joints to relative target positions. Returns true if none of the values
    were constrained, false if at least one of the values was constrained to limits.
@@ -238,5 +258,4 @@ void Braccio::update() {
   _moveServo(WRIST);
   _moveServo(WRIST_ROT);
   _moveServo(GRIPPER);
-
 }
